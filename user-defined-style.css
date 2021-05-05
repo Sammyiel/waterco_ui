@@ -1,0 +1,51 @@
+h4 {
+    color: #d00d2d;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer a {
+    color: #d00d2d;
+}
+
+footer {
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    /* background-color: #758592; */
+}
+
+#nav-div {
+    padding-right: 2%;
+}
+
+#copyright {
+    padding-top: 3%;
+    padding-bottom: 5%;
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #758592;
+}
+
+#icon {
+    padding-top: 2%;
+}
+
+#contact-message {
+    width: 100%;
+}
+
+
+/* Drop */
+
+
+/* End of drop */

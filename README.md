@@ -1,1 +1,1 @@
-# waterco_ui
+# bookclub-api-frontend

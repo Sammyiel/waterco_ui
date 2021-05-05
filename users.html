@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Users Control Panel</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form onsubmit="event.preventDefault(); onFormSubmit();">
+                <div class="form-group row">
+                    <label for="user_name" class="col-sm-4 col-form-label col-form-label-sm">Full Name:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="user-name" class="form-control form-control-sm" id="user_name" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="user_id" class="col-sm-4 col-form-label col-form-label-sm">User ID:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="user-id" class="form-control form-control-sm" id="user_id" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="user_gender" class="col-sm-4 col-form-label col-form-label-sm">Gender</label>
+                    <div class="col-sm-8">
+                        <select class="custom-select form-control-sm" name="user-gender" id="user_gender">
+                        <option selected>Gender</option>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Male">Other</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email_address" class="col-sm-4 col-form-label col-form-label-sm">Email Address:</label>
+                    <div class="col-sm-8">
+                        <input type="email" name="email-address" class="form-control form-control-sm" id="email_address" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="telephone_number" class="col-sm-4 col-form-label col-form-label-sm">Telephone:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="telephone-number" class="form-control form-control-sm" id="telephone_number" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="date_of_birth" class="col-sm-4 col-form-label col-form-label-sm">Date of Birth:</label>
+                    <div class="col-sm-8">
+                        <input type="date" name="date_of_birth" class="form-control form-control-sm" id="date_of_birth" placeholder="col-form-label-sm">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="address" class="col-sm-4 col-form-label col-form-label-sm">Address:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="address" class="form-control form-control-sm" id="address" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm" id="userslist">
+                    <thead>
+                        <tr class="">
+                            <th class="">User ID</th>
+                            <th class="">Email Address</th>
+                            <th class="">User Name</th>
+                            <th class="">Gender</th>
+                            <th class="">Date of Birth</th>
+                            <th class="">Telephone Number</th>
+                            <th class="">Address</th>
+                            <th class="">Edit / Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <!-- Records Go In Here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/user_interface.js"></script>
+</body>
+
+</html>

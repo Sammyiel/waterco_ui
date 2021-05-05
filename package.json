@@ -1,0 +1,28 @@
+{
+    "name": "sowc-backend",
+    "version": "1.0.0",
+    "description": "Api to connect to sowc database",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Database",
+        "SOWC",
+        "API"
+    ],
+    "author": "Samwel Maisiba",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mysql2": "^2.2.5",
+        "nodemon": "^2.0.7",
+        "sequelize": "^6.5.1",
+        "sequelize-auto": "^0.8.1",
+        "proxy": "http://localhost:5000/admin?_=1617047084718"
+    }
+}

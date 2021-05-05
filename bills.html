@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">WaterCo Member Clients</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <form onsubmit="event.preventDefault(); onFormSubmit();">
+                <div class="form-group row">
+                    <label for="billing_id" class="col-sm-4 col-form-label col-form-label-sm">Billing ID:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="billing_id" class="form-control form-control-sm" id="billing_id" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="premise_id" class="col-sm-4 col-form-label col-form-label-sm">Premise ID:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="premise_id" class="form-control form-control-sm" id="premise_id" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="previous_reading" class="col-sm-4 col-form-label col-form-label-sm">Previous Reading:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="previous_reading" class="form-control form-control-sm" id="previous_reading" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="reading_date" class="col-sm-4 col-form-label col-form-label-sm">Reading Date:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="reading_date" class="form-control form-control-sm" id="reading_date" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="current_reading" class="col-sm-4 col-form-label col-form-label-sm">Current Reading:</label>
+                    <div class="col-sm-8">
+                        <input type="date" name="current_reading" class="form-control form-control-sm" id="current_reading" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="total_charges" class="col-sm-4 col-form-label col-form-label-sm">Total Charges:</label>
+                    <div class="col-sm-8">
+                        <input type="date" name="total_charges" class="form-control form-control-sm" id="total_charges" placeholder="">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm" id="paymentslist">
+                    <thead>
+                        <tr class="">
+                            <th class="">Billing ID</th>
+                            <th class="">Premise ID</th>
+                            <th class="">Previous Reading</th>
+                            <th class="">Reading Date</th>
+                            <th class="">Current Reading</th>
+                            <th class="">Total Charges</th>
+                            <th class="">Edit / Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <!-- Records Go In Here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/billing_interface.js"></script>
+</body>
+
+</html>
