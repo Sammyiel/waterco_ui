@@ -4,8 +4,17 @@
 <body>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Users Control Panel</h1>
+        <div>
+            <button class="btn btn-secondary" onclick="addMember();">Add a User</button>
+        </div>
+        <div>
+            <button class="btn btn-success" onclick="viewAll();">View all Users</button>
+        </div>
     </div>
-    <div class="row">
+    <p class="text-center">
+        Searches appear below..
+    </p>
+    <div class="row" id="hidden-field" style="visibility: hidden;">
         <div class="col-md-4">
             <form onsubmit="event.preventDefault(); onFormSubmit();">
                 <div class="form-group row">
@@ -77,7 +86,7 @@
                             <th class="">Edit / Delete</th>
                         </tr>
                     </thead>
-                    <tbody class="">
+                    <tbody class="" id="content-here">
                         <!-- Records Go In Here -->
                     </tbody>
                 </table>

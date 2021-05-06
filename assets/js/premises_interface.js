@@ -5,21 +5,47 @@ var selectedRecordID = null;
 var selectedEmail = null;
 var baseUrl = "http://localhost:5000";
 
-$(document).ready(function() {
+function addMember() {
+    document.getElementById("hidden-field").style.visibility = "visible";
+}
+
+function viewAll() {
+    document.getElementById("hidden-field").style.visibility = "visible";
+    var loading = document.getElementById("content-here");
+    loading.innerHTML = 'Loading...';
     $.ajax({
         type: "GET",
         url: baseUrl + "/premises",
         cache: false,
-        // crossDomain: true,
         success: function(response) {
+            loading.innerHTML = '';
             var data = response.data;
             data.forEach((premise) => {
                 addRecordToTable(premise);
             });
         }
     });
-});
+}
 
+function searchDatabase() {
+    var myInput = document.getElementById("myInput").value;
+    document.getElementById("hidden-field").style.visibility = "visible";
+    var loading = document.getElementById("content-here");
+    loading.innerHTML = 'Loading...';
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/premises/" + myInput,
+        cache: false,
+        // crossDomain: true,
+        success: function(response) {
+            loading.innerHTML = '';
+            var data = response.data;
+            data.forEach((premise) => {
+                addRecordToTable(premise);
+            });
+        }
+    });
+}
 
 function addRecordToTable(data) {
     var premiseslist = document.getElementById("premiseslist").getElementsByTagName("tbody")[0];

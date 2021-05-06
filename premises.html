@@ -4,12 +4,23 @@
 <body>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Premises</h1>
-        <form class="form-horizontal" onsubmit="event.preventDefault(); searchDatabase();">
-            <input type="text" placeholder="Search premises..">
-            <button class="btn btn-light">Search</button>
-        </form>
+        <div>
+            <button class="btn btn-secondary" onclick="addMember();">Add a Premise</button>
+        </div>
+        <div>
+            <button class="btn btn-success" onclick="viewAll();">View all Premises</button>
+        </div>
+        <div>
+            <form onsubmit="event.preventDefault(); searchDatabase();">
+                <input type="text" placeholder="Enter id to search.." id="myInput">
+                <button onclick="searchDatabase()" class="btn btn-primary" type="button">Get Premise</button>
+            </form>
+        </div>
     </div>
-    <div class="row">
+    <p class="text-center">
+        Searches appear below..
+    </p>
+    <div class="row" style="visibility:hidden" id="hidden-field">
         <div class="col-md-4">
             <form onsubmit="event.preventDefault(); onFormSubmit();">
                 <div class="form-group row">
@@ -70,7 +81,7 @@
                             <th class="">Edit</th>
                         </tr>
                     </thead>
-                    <tbody class="">
+                    <tbody class="" id="content-here">
                         <!-- Records Go In Here -->
                     </tbody>
                 </table>

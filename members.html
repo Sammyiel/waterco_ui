@@ -4,8 +4,23 @@
 <body>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">WaterCo Member Clients</h1>
+        <div>
+            <button class="btn btn-secondary" onclick="addMember();">Add a Member</button>
+        </div>
+        <div>
+            <button class="btn btn-success" onclick="viewAll();">View all Members</button>
+        </div>
+        <div>
+            <form onsubmit="event.preventDefault(); searchDatabase();">
+                <input type="text" placeholder="Enter id to search.." id="myInput">
+                <button onclick="searchDatabase()" class="btn btn-primary" type="button">Get Member</button>
+            </form>
+        </div>
     </div>
-    <div class="row">
+    <p class="text-center">
+        Searches appear below..
+    </p>
+    <section class="row" id="hidden-field" style="visibility: hidden;">
         <div class="col-md-4">
             <form onsubmit="event.preventDefault(); onFormSubmit();">
                 <div class="form-group row">
@@ -77,13 +92,13 @@
                             <th class="">Edit / Delete</th>
                         </tr>
                     </thead>
-                    <tbody class="">
+                    <tbody class="" id="content-here">
                         <!-- Records Go In Here -->
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
+    </section>
 
     <script src="assets/js/jquery-3.3.1.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>

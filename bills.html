@@ -3,9 +3,21 @@
 
 <body>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">WaterCo Member Clients</h1>
+        <h1 class="h2">Bills</h1>
+        <div>
+            <button class="btn btn-secondary" onclick="addMember();">Create Bill</button>
+        </div>
+        <div>
+            <form onsubmit="event.preventDefault(); searchDatabase();">
+                <input type="text" placeholder="id eg 1, 2, 3" id="myInput">
+                <button onclick="searchDatabase()" class="btn btn-primary" type="button">View Bill</button>
+            </form>
+        </div>
     </div>
-    <div class="row">
+    <p class="text-center">
+        Searches appear below..
+    </p>
+    <div class="row" id="hidden-field" style="visibility: hidden;">
         <div class="col-md-4">
             <form onsubmit="event.preventDefault(); onFormSubmit();">
                 <div class="form-group row">
@@ -65,7 +77,7 @@
                             <th class="">Edit / Delete</th>
                         </tr>
                     </thead>
-                    <tbody class="">
+                    <tbody class="" id="content-here">
                         <!-- Records Go In Here -->
                     </tbody>
                 </table>

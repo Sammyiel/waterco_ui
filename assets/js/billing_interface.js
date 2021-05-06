@@ -5,21 +5,44 @@ var selectedRecordID = null;
 var selectedEmail = null;
 var baseUrl = "http://localhost:5000";
 
-$(document).ready(function() {
+function addMember() {
+    document.getElementById("hidden-field").style.visibility = "visible";
+}
+
+// $(document).ready(function() {
+//     $.ajax({
+//         type: "GET",
+//         url: baseUrl + "/billing",
+//         cache: false,
+//         // crossDomain: true,
+//         success: function(response) {
+//             var data = response.data;
+//             data.forEach((billing) => {
+//                 addRecordToTable(billing);
+//             });
+//         }
+//     });
+// });
+
+function searchDatabase() {
+    var myInput = document.getElementById("myInput").value;
+    document.getElementById("hidden-field").style.visibility = "visible";
+    var loading = document.getElementById("content-here");
+    loading.innerHTML = 'Loading...';
     $.ajax({
         type: "GET",
-        url: baseUrl + "/billing",
+        url: baseUrl + "/billing/" + myInput,
         cache: false,
         // crossDomain: true,
         success: function(response) {
+            loading.innerHTML = '';
             var data = response.data;
-            data.forEach((billing) => {
-                addRecordToTable(billing);
+            data.forEach((bill) => {
+                addRecordToTable(bill);
             });
         }
     });
-});
-
+}
 
 function addRecordToTable(data) {
     var billinglist = document.getElementById("paymentslist").getElementsByTagName("tbody")[0];
