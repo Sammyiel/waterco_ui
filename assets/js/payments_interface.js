@@ -3,7 +3,7 @@
 var selectedRecord = null;
 var selectedRecordID = null;
 var selectedEmail = null;
-var baseUrl = "https://waterco-api-and-database.herokuapp.com/";
+var baseUrl = "https://waterco-api-and-database.herokuapp.com";
 
 function addMember() {
     document.getElementById("hidden-field").style.visibility = "visible";
